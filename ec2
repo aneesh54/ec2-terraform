@@ -14,3 +14,8 @@ provider "aws" {
 resource "aws_instance" "web" {
   ami           = "ami-012967cc5a8c9f891"
   instance_type = "t2.micro"
+
+  tags = {
+    Name = "terraform-machine"
+  }
+}
